@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kafka-microservices-demo
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+kafka:
+  topic:
+    name: demo-topic
+
+server:
+  port: 8081
