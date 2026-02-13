@@ -2,6 +2,16 @@ spring:
   application:
     name: kafka-microservices-demo
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/wikimedia
+    username: root
+    password: Telcovas@1234
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
   kafka:
     bootstrap-servers: localhost:9092
 
