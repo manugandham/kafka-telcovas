@@ -1,3 +1,9 @@
-FROM tomcat:8.0.20-jre8
-# Dummy text to test 
-COPY target/kafka-telcovas*.war /usr/local/tomcat/webapps/kafka-telcovas
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY producer-service/target/producer-service-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java","-jar","app.jar"]
